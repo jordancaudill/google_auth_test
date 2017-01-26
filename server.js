@@ -52,6 +52,9 @@ mongoose.connect(DBSTRING, function (err, res) {
     // Start the express server on the given port
     app.listen(port, function () {
         console.log('Server is running on localhost:' + port);
+        console.log('ertyu');
+        require('./googlesheet/googlesheet.js')();
+        console.log('esrtfyguhj');
     });
 
 });
