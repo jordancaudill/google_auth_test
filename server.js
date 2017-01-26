@@ -8,7 +8,7 @@ var bodyParser = require('body-parser');
 var app = express();
 var Log = require('./schemas/logSchema');
 
-var port = 9001;
+var port = 9002;
 
 // Enable CORS
 app.options('*', cors());
@@ -46,17 +46,12 @@ if (process.env.NODE_ENV === 'test') {
 } else {
     DBSTRING = 'mongodb://localhost/tefl';
 }
-
-mongoose.connect(DBSTRING, function (err, res) {
-    console.log('Successfully connected to the database at ' + DBSTRING);
-    // Start the express server on the given port
-    app.listen(port, function () {
+app.listen(port, function () {
         console.log('Server is running on localhost:' + port);
         console.log('ertyu');
         require('./googlesheet/googlesheet.js')();
         console.log('esrtfyguhj');
     });
 
-});
 
 module.exports = app;
