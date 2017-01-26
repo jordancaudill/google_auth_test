@@ -1,0 +1,36 @@
+{
+  "name": "jordan_seed",
+  "version": "1.0.0",
+  "description": "The back-end rest api for the tefl project",
+  "main": "server.js",
+  "dependencies": {
+    "async": "^2.1.4",
+    "bcryptjs": "^2.4.0",
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.1",
+    "cross-env": "^3.1.4",
+    "express": "^4.14.0",
+    "mongodb": "^2.2.11",
+    "mongoose": "^4.7.0",
+    "rand-token": "^0.3.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "mocha": "^3.2.0"
+  },
+  "scripts": {
+    "test": "cross-env NODE_ENV=test mocha",
+    "start": "cross-env NODE_ENV=development node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Galladill/tefl-server.git"
+  },
+  "author": "Jordan Caudill, Duncan Gallagher",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Galladill/tefl-server/issues"
+  },
+  "homepage": "https://github.com/Galladill/tefl-server"
+}
